@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cooking-page">
+    <nav class="navbar cooking-nav">
+        <div class="nav-container">
+            <div class="nav-brand"><a href="index.html">← Back to Main Site</a></div>
+            <ul class="nav-menu">
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#musings">Food Musings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="cooking-hero">
+        <div class="container">
+            <h1>Kitchen Adventures</h1>
+            <p class="cooking-intro">Where math meets mise en place. Turns out, I like following recipes about as much as I like following proofs—which is to say, I understand the structure but can't help tinkering.</p>
+        </div>
+    </section>
+
+    <section id="recipes" class="section">
+        <div class="container">
+            <h2>Recipes</h2>
+            
+            <div class="recipe-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="dinner">Dinner</button>
+                <button class="filter-btn" data-filter="baking">Baking</button>
+                <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+                <button class="filter-btn" data-filter="sides">Sides</button>
+            </div>
+
+            <div class="recipe-grid">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card" data-category="dinner">
+                    <div class="recipe-image">
+                        <img src="recipe1.jpg" alt="Recipe name">
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Perfect Roast Chicken</h3>
+                        <p class="recipe-description">A simple, foolproof roast chicken that's crispy on the outside and juicy inside. This is my go-to Sunday dinner.</p>
+                        <div class="recipe-meta">
+                            <span>🕐 1.5 hours</span>
+                            <span>👥 4 servings</span>
+                        </div>
+                        <a href="recipe-roast-chicken.html" class="recipe-link">View Recipe →</a>
+                    </div>
+                </div>
+
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card" data-category="baking">
+                    <div class="recipe-image">
+                        <img src="recipe2.jpg" alt="Recipe name">
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Sourdough Bread</h3>
+                        <p class="recipe-description">My starter is older than my PhD program. This is the result of countless iterations and actually understanding baker's percentages.</p>
+                        <div class="recipe-meta">
+                            <span>🕐 24 hours</span>
+                            <span>👥 1 loaf</span>
+                        </div>
+                        <a href="recipe-sourdough.html" class="recipe-link">View Recipe →</a>
+                    </div>
+                </div>
+
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card" data-category="dinner">
+                    <div class="recipe-image">
+                        <img src="recipe3.jpg" alt="Recipe name">
+                    </div>
+                    <div class="recipe-content">
+                        <h3>Weeknight Pasta Aglio e Olio</h3>
+                        <p class="recipe-description">When you're too tired to think but still want something better than takeout. Six ingredients, fifteen minutes, deeply satisfying.</p>
+                        <div class="recipe-meta">
+                            <span>🕐 15 min</span>
+                            <span>👥 2 servings</span>
+                        </div>
+                        <a href="recipe-pasta.html" class="recipe-link">View Recipe →</a>
+                    </div>
+                </div>
+
+                <!-- Add more recipe cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="musings" class="section musings-section">
+        <div class="container">
+            <h2>Food Musings</h2>
+            <p class="section-description">Thoughts on techniques, ingredients, and the occasional kitchen disaster.</p>
+
+            <div class="musings-list">
+                <article class="musing">
+                    <div class="musing-date">December 2024</div>
+                    <h3>On the Maillard Reaction and Patience</h3>
+                    <p>I've been thinking about how we rush the Maillard reaction. We crank up the heat because we're hungry, because we think higher temperature equals faster cooking. But that beautiful browning—the one that makes food taste like something more than the sum of its ingredients—it needs time...</p>
+                    <a href="musing-maillard.html" class="read-more">Read more →</a>
+                </article>
+
+                <article class="musing">
+                    <div class="musing-date">November 2024</div>
+                    <h3>Why I Weigh Everything (Even When Baking Cookies)</h3>
+                    <p>My friends think I'm ridiculous for weighing flour to the gram when making chocolate chip cookies. "It's not chemistry," they say. But here's the thing—it kind of is. And more importantly, once you start weighing ingredients, you can actually iterate and improve...</p>
+                    <a href="musing-weighing.html" class="read-more">Read more →</a>
+                </article>
+
+                <article class="musing">
+                    <div class="musing-date">October 2024</div>
+                    <h3>The Best Kitchen Tool I Own (It's a $3 Bench Scraper)</h3>
+                    <p>Everyone asks about my fancy knife or my stand mixer, but honestly? The most-used tool in my kitchen cost three dollars at a restaurant supply store. It's a bench scraper, and it's changed how I cook...</p>
+                    <a href="musing-bench-scraper.html" class="read-more">Read more →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cooking-footer">
+        <div class="container">
+            <p>These recipes are shared with love and the understanding that cooking is personal. Adjust, experiment, make them your own.</p>
+            <p><a href="index.html">Back to academic stuff</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

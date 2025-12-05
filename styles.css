@@ -1,0 +1,641 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Main site colors - warm neutrals */
+    --primary-color: #2c5f7d;
+    --secondary-color: #d4a574;
+    --text-dark: #2d3748;
+    --text-medium: #4a5568;
+    --text-light: #718096;
+    --bg-light: #f7fafc;
+    --bg-white: #ffffff;
+    --border-color: #e2e8f0;
+    
+    /* Cooking section colors - warmer palette */
+    --cooking-primary: #c25b3f;
+    --cooking-secondary: #f4a261;
+    --cooking-accent: #e76f51;
+    --cooking-bg: #fffbf5;
+    --cooking-dark: #3d2e26;
+    
+    /* Typography */
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    --font-serif: 'Georgia', 'Cambria', 'Times New Roman', serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--bg-white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.nav-brand a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--text-medium);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.cooking-link {
+    color: var(--cooking-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-medium);
+    margin-bottom: 0.5rem;
+}
+
+.affiliation {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.contact-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: var(--secondary-color);
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    max-width: 800px;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    color: var(--text-medium);
+    font-size: 1.05rem;
+}
+
+/* Sections */
+.section {
+    padding: 4rem 0;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.section h4 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Research Section */
+.research-interests ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.research-interests li {
+    padding: 0.75rem 1rem;
+    background-color: var(--bg-light);
+    border-left: 4px solid var(--secondary-color);
+    color: var(--text-medium);
+}
+
+.project {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+}
+
+.project p {
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+/* Publications Section */
+.publication-category {
+    margin-bottom: 3rem;
+}
+
+.publication {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.publication:last-child {
+    border-bottom: none;
+}
+
+.pub-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.pub-authors {
+    color: var(--text-medium);
+    margin-bottom: 0.25rem;
+}
+
+.pub-venue {
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.pub-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.pub-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.pub-links a:hover {
+    text-decoration: underline;
+}
+
+.coming-soon {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Teaching Section */
+.teaching-item {
+    margin-bottom: 2rem;
+}
+
+.course {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+}
+
+.course h4 {
+    margin-bottom: 0.25rem;
+}
+
+.semester {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.course p {
+    color: var(--text-medium);
+}
+
+/* CV Section */
+.cv-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.cv-link:hover {
+    text-decoration: underline;
+}
+
+.cv-section {
+    margin-top: 2rem;
+}
+
+.cv-item {
+    margin-bottom: 1.5rem;
+}
+
+.cv-title {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.cv-institution {
+    color: var(--text-medium);
+    margin-bottom: 0.25rem;
+}
+
+.cv-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cv-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-medium);
+}
+
+.cv-list li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-light);
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 4rem;
+}
+
+/* ==================== COOKING PAGE STYLES ==================== */
+
+.cooking-page {
+    background-color: var(--cooking-bg);
+}
+
+.cooking-nav {
+    background-color: var(--cooking-bg);
+    border-bottom-color: var(--cooking-secondary);
+}
+
+.cooking-nav .nav-menu a {
+    color: var(--cooking-dark);
+}
+
+.cooking-nav .nav-menu a:hover {
+    color: var(--cooking-primary);
+}
+
+.cooking-hero {
+    background: linear-gradient(135deg, var(--cooking-secondary) 0%, var(--cooking-accent) 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+}
+
+.cooking-hero h1 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cooking-intro {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+/* Recipe Filters */
+.recipe-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    border: 2px solid var(--cooking-secondary);
+    color: var(--cooking-dark);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--cooking-primary);
+    border-color: var(--cooking-primary);
+    color: white;
+}
+
+/* Recipe Grid */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.recipe-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.recipe-image {
+    width: 100%;
+    height: 220px;
+    background-color: var(--cooking-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-content {
+    padding: 1.5rem;
+}
+
+.recipe-content h3 {
+    font-family: var(--font-serif);
+    color: var(--cooking-dark);
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+}
+
+.recipe-description {
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.recipe-link {
+    color: var(--cooking-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.recipe-link:hover {
+    color: var(--cooking-accent);
+}
+
+/* Musings Section */
+.musings-section {
+    background-color: white;
+}
+
+.musings-section h2 {
+    border-bottom-color: var(--cooking-primary);
+}
+
+.section-description {
+    color: var(--text-medium);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.musings-list {
+    max-width: 800px;
+}
+
+.musing {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.musing:last-child {
+    border-bottom: none;
+}
+
+.musing-date {
+    color: var(--cooking-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.musing h3 {
+    font-family: var(--font-serif);
+    color: var(--cooking-dark);
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.musing p {
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: var(--cooking-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--cooking-accent);
+}
+
+.cooking-footer {
+    background-color: var(--cooking-dark);
+    color: rgba(255,255,255,0.8);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cooking-footer p {
+    margin-bottom: 0.5rem;
+}
+
+.cooking-footer a {
+    color: var(--cooking-secondary);
+    text-decoration: none;
+}
+
+.cooking-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-image {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .contact-links {
+        justify-content: center;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cooking-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .cooking-intro {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+}
