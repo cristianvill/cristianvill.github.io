@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristian's Risotto ai Funghi - Cristian Villatoro</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .recipe-detail {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .recipe-header {
+            padding: 3rem 0 2rem;
+            border-bottom: 2px solid var(--cooking-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .recipe-header h1 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--cooking-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .recipe-intro {
+            color: var(--text-medium);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .recipe-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 1.5rem;
+            background-color: var(--cooking-bg);
+            border-radius: 8px;
+        }
+        
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-value {
+            font-size: 1.1rem;
+            color: var(--cooking-dark);
+            font-weight: 600;
+        }
+        
+        .recipe-section {
+            margin: 3rem 0;
+        }
+        
+        .recipe-section h2 {
+            font-size: 1.75rem;
+            color: var(--cooking-dark);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--cooking-secondary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .ingredients-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .ingredients-list li {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-dark);
+        }
+        
+        .ingredients-list li:hover {
+            background-color: var(--cooking-bg);
+        }
+        
+        .instructions-list {
+            list-style: none;
+            counter-reset: step-counter;
+            padding: 0;
+        }
+        
+        .instructions-list li {
+            counter-increment: step-counter;
+            position: relative;
+            padding: 1.5rem 0 1.5rem 4rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+        
+        .instructions-list li:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 1.25rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: var(--cooking-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .recipe-notes {
+            background-color: var(--cooking-bg);
+            padding: 1.5rem;
+            border-left: 4px solid var(--cooking-secondary);
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+        
+        .recipe-notes h3 {
+            color: var(--cooking-dark);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        
+        .recipe-notes p, .recipe-notes ul {
+            color: var(--text-medium);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+        
+        .recipe-notes ul {
+            padding-left: 1.5rem;
+        }
+        
+        .recipe-notes p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--cooking-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .portioning-guide {
+            background-color: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .portioning-guide h3 {
+            color: var(--cooking-dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .portioning-guide p {
+            color: var(--text-medium);
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="cooking-page">
+    <nav class="navbar cooking-nav">
+        <div class="nav-container">
+            <div class="nav-brand"><a href="index.html">Cristian Villatoro</a></div>
+            <ul class="nav-menu">
+                <li><a href="cooking.html">← Back to Cooking</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article class="recipe-detail">
+            <a href="cooking.html#recipes" class="back-link">← All Recipes</a>
+            
+            <div class="recipe-header">
+                <h1>Cristian's Risotto ai Funghi</h1>
+                <p class="recipe-intro">A creamy, umami-rich risotto where technique and ingredient quality shine.</p>
+                
+                <div class="recipe-stats">
+                    <div class="stat">
+                        <span class="stat-label">Prep Time</span>
+                        <span class="stat-value">15 minutes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Cook Time</span>
+                        <span class="stat-value">30-40 minutes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Total Time</span>
+                        <span class="stat-value">30-40 minutes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Servings</span>
+                        <span class="stat-value">1-2</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portioning-guide">
+                <h3>🧮 Portioning Guide</h3>
+                <p>Rice: 80–100g Arborio rice per serving</p>
+                <p>Mushrooms: ~1 mushroom per 20g of rice (e.g., 5 mushrooms for 100g rice)</p>
+                <p>Broth: Enough to give multiple "broth baths" — keep extra on hand, warm (not boiling)</p>
+            </div>
+
+            <section class="recipe-section">
+                <h2>Ingredients</h2>
+                <ul class="ingredients-list">
+                    <li>80-100 g Arborio rice</li>
+                    <li>4-6 cremini mushrooms, sliced</li>
+                    <li>1 small shallot, finely chopped</li>
+                    <li>black pepper, cracked</li>
+                    <li>salt, pinch</li>
+                    <li>2-3 tbsp olive oil, high quality</li>
+                    <li>1/4 cup white wine, dry</li>
+                    <li>2-3 cups broth, warm, vegetable or mushroom</li>
+                    <li>unsalted butter, to finish</li>
+                    <li>Pecorino Romano, freshly grated, to taste</li>
+                </ul>
+            </section>
+
+            <section class="recipe-section">
+                <h2>Instructions</h2>
+                <ol class="instructions-list">
+                    <li>Toast the black pepper in a pan over medium/medium-low heat until fragrant.</li>
+                    <li>Add the rice and toast until the grains are translucent and nutty-smelling.</li>
+                    <li>Add sliced mushrooms with a pinch of salt. Cook until they release their water. You'll know they're done when the pan starts to sizzle again. A lid can speed things up. (Cremini is classic, but use what's good.)</li>
+                    <li>Add shallots, then olive oil. Stir gently and cook until shallots are translucent.</li>
+                    <li>Deglaze with white wine. Stir to coat everything and scrape any fond from the pan. Wait for the alcohol to burn off — you'll smell floral notes.</li>
+                    <li>Start broth baths: Add warm (not boiling) broth until it covers the mixture about 3/4 of the way. Stir to distribute liquid evenly. Avoid adding cold broth — it slows cooking and dulls texture.</li>
+                    <li>When the rice is drying and the pan sizzles, add more broth. Repeat this cycle. After a few baths, the rice will puff up. At this point, taste before each addition to check if it's nearing al dente.</li>
+                    <li>Once nearly or just at al dente, add a bit more broth to keep it wet. Take off the heat.</li>
+                    <li>Stir in butter, then grated Pecorino Romano. Add cheese gradually until you see tiny cheesy strings when stirring. That's your creamy finish.</li>
+                </ol>
+            </section>
+
+            <div class="recipe-notes">
+                <h3>✨ Final Tips</h3>
+                <ul>
+                    <li>Pecorino gives more punch than Parmigiano — adjust to your taste.</li>
+                    <li>The goal is creamy and glossy, not soupy.</li>
+                    <li>Ingredient quality matters most for: rice, mushrooms, broth, and olive oil.</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+
+    <footer class="cooking-footer">
+        <div class="container">
+            <p><a href="cooking.html">← Back to all recipes</a></p>
+        </div>
+    </footer>
+</body>
+</html>
